@@ -11,7 +11,7 @@
   - 2 台 EC2 實例（AMI：Amazon Linux 2023）
   - 前端端口：80（HTTP），443（HTTPS 可選）
   - 後端端口：3000
-  - 2 個彈性 IP（Elastic IP）綁定到前後端實例
+  - 1 個彈性 IP（Elastic IP）綁定前端實例
 
 - **域名**：
   - 使用 Route 53 綁定域名（例如 `example.com` 和 `www.example.com`）到前端彈性 IP。
