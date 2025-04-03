@@ -144,7 +144,7 @@ firewall-cmd --reload
 
 ## 8. 測試
 訪問 http://example.com  或  https://example.com  （如果設置了 HTTPS），確認前端頁面正常載入。
-測試 API 請求，例如 curl http://example.com/api/，確認後端正常回應。
+測試 API 請求，例如  curl http://example.com/api/  ，確認後端正常回應。
 
 
 
