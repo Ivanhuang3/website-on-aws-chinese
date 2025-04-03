@@ -1,0 +1,81 @@
+/* 調整導航欄的語言切換按鈕和購物車圖標 */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cart-icon {
+    margin-left: 1rem;
+    position: relative;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.75rem;
+}
+
+/* 主視覺區域文字樣式 */
+.carousel-caption h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 產品卡片樣式 */
+.card img {
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* 關於我們樣式 */
+#about img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 聯繫我們樣式 */
+#contact .form-label {
+    font-weight: bold;
+}
+
+#contact .form-control {
+    border-radius: 5px;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    #about img {
+        max-height: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .cart-icon {
+        margin-left: 0.5rem;
+    }
+}

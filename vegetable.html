@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔬果肉鋪</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入 Font Awesome 圖標庫，用於顯示購物車圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 導航欄 -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">蔬果肉鋪</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">產品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">聯繫我們</a></li>
+                    </ul>
+                    <div class="lang-switch">
+                        <button class="btn btn-outline-light me-2" onclick="switchLanguage('zh')">中文</button>
+                        <button class="btn btn-outline-light me-2" onclick="switchLanguage('en')">English</button>
+                    </div>
+                    <!-- 添加購物車圖標和商品數量 -->
+                    <div class="cart-icon">
+                        <a href="cart.html" class="text-white">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 產品列表區域 -->
+    <section id="products" class="container my-5">
+        <h2 class="text-center mb-4" id="products-title">產品</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" data-product-id="carrot">
+                <div class="card h-100">
+                    <img src="product/Carrot.jpg" class="card-img-top" alt="紅羅蔔">
+                    <div class="card-body">
+                        <h5 class="card-title product-name">紅羅蔔</h5>
+                        <p class="card-text product-price">NT$500</p>
+                        <a href="product-carrot.html" class="btn btn-info">查看詳情</a>
+                        <!-- 添加查看詳情按鈕，跳轉到產品頁面 -->
+                        <button class="btn btn-primary add-to-cart" data-product-id="carrot" data-name="紅羅蔔" data-price="500" data-image="Carrot.jpg">加入購物車</button>
+                        <!-- 修改加入購物車按鈕，添加 data-* 屬性，點擊時調用 addToCart 函數 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-product-id="cauliflower">
+                <div class="card h-100">
+                    <img src="product/Cauliflower.jpg" class="card-img-top" alt="花椰菜">
+                    <div class="card-body">
+                        <h5 class="card-title product-name">花椰菜</h5>
+                        <p class="card-text product-price">NT$150</p>
+                        <a href="product-cauliflower.html" class="btn btn-info">查看詳情</a>
+                        <button class="btn btn-primary add-to-cart" data-product-id="cauliflower" data-name="花椰菜" data-price="150" data-image="Cauliflower.jpg">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-product-id="eggplant">
+                <div class="card h-100">
+                    <img src="product/Eggplant.jpg" class="card-img-top" alt="茄子">
+                    <div class="card-body">
+                        <h5 class="card-title product-name">茄子</h5>
+                        <p class="card-text product-price">NT$300</p>
+                        <a href="product-eggplant.html" class="btn btn-info">查看詳情</a>
+                        <button class="btn btn-primary add-to-cart" data-product-id="eggplant" data-name="茄子" data-price="300" data-image="Eggplant.jpg">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-product-id="spinach">
+                <div class="card h-100">
+                    <img src="product/Spinach.jpg" class="card-img-top" alt="菠菜">
+                    <div class="card-body">
+                        <h5 class="card-title product-name">菠菜</h5>
+                        <p class="card-text product-price">NT$300</p>
+                        <a href="product-spinach.html" class="btn btn-info">查看詳情</a>
+                        <button class="btn btn-primary add-to-cart" data-product-id="spinach" data-name="菠菜" data-price="300" data-image="Spinach.jpg">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-product-id="tomato">
+                <div class="card h-100">
+                    <img src="product/Tomato.jpg" class="card-img-top" alt="番茄">
+                    <div class="card-body">
+                        <h5 class="card-title product-name">番茄</h5>
+                        <p class="card-text product-price">NT$300</p>
+                        <a href="product-tomato.html" class="btn btn-info">查看詳情</a>
+                        <button class="btn btn-primary add-to-cart" data-product-id="tomato" data-name="番茄" data-price="300" data-image="Tomato.jpg">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p id="contact-info">合作詢問: saucyking3@gmail.com</p>
+        <p id="copyright">© 2025 蔬果肉鋪</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

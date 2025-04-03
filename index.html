@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔬果肉鋪</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">蔬果肉鋪</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">產品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">聯繫我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html">購物車 (<span id="cart-count">0</span>)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="orders.html">訂單查詢</a></li>
+                    </ul>
+                    <div class="lang-switch me-3">
+                        <button class="btn btn-outline-light me-2" onclick="switchLanguage('zh')">中文</button>
+                        <button class="btn btn-outline-light" onclick="switchLanguage('en')">English</button>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html" class="text-white">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主視覺區域 -->
+    <section id="hero" class="carousel slide" data-bs-ride="carousel" style="height: 80vh;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="product/hero-slide1.jpg" class="d-block w-100" style="height: 80vh; object-fit: cover;" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4" id="hero-title">蔬果與肉類的完美融合</h2>
+                    <p class="lead" id="hero-text">將蔬果肉鋪的美味傳遞至全世界</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="product/hero-slide2.jpg" class="d-block w-100" style="height: 80vh; object-fit: cover;" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4" id="hero-title">蔬果與肉類的完美融合</h2>
+                    <p class="lead" id="hero-text">將蔬果肉鋪的美味傳遞至全世界</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="product/hero-slide3.jpg" class="d-block w-100" style="height: 80vh; object-fit: cover;" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4" id="hero-title">蔬果與肉類的完美融合</h2>
+                    <p class="lead" id="hero-text">將蔬果肉鋪的美味傳遞至全世界</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <!-- 產品/服務展示 -->
+    <section id="products" class="container my-5">
+        <h2 class="text-center mb-4" id="products-title">產品</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <a href="vegetable.html" target="_blank">
+                        <img src="product/product1.jpg" class="card-img-top" alt="產品1">
+                    </a>
+                    <div class="card-body">
+                        <a href="vegetable.html" target="_blank" class="card-text text-decoration-none" id="product-vegetable">蔬果</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <a href="meet.html" target="_blank">
+                        <img src="product/product2.jpg" class="card-img-top" alt="產品2">
+                    </a>
+                    <div class="card-body">
+                        <a href="meet.html" target="_blank" class="card-text text-decoration-none" id="product-meat">肉類</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們 -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center mb-4" id="about-title">關於我們</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="product/about-image.jpg" class="img-fluid rounded" alt="關於我們圖片">
+            </div>
+            <div class="col-md-6">
+                <p id="about-text">
+                    蔬果肉鋪致力於提供最新鮮、最優質的蔬果與肉類產品。我們與當地農民和供應商合作，確保每一件商品都符合高標準的新鮮度和品質。我們的使命是將健康與美味帶到您的餐桌，讓每一位顧客都能享受到大自然的恩賜。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯繫我們 -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4" id="contact-title">聯繫我們</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <label for="contact-name" class="form-label" id="contact-name-label">姓名</label>
+                        <input type="text" class="form-control" id="contact-name" placeholder="請輸入您的姓名" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact-email" class="form-label" id="contact-email-label">電子郵件</label>
+                        <input type="email" class="form-control" id="contact-email" placeholder="請輸入您的電子郵件" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact-message" class="form-label" id="contact-message-label">留言</label>
+                        <textarea class="form-control" id="contact-message" rows="4" placeholder="請輸入您的留言" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="contact-submit">送出</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p id="contact-info">合作詢問: saucyking3@gmail.com</p>
+        <p id="copyright">© 2025 蔬果肉鋪</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
